@@ -7,6 +7,13 @@ Components
 4. 64GB Corsair LPX RAM
 5. Gigabyte GC-WB1733D-I WiFi Card. (Fully working at full speed with bluetooth thanks to AirportITWLM)
 
+# Differences
+
+Preinstall EFI For Install and Setup
+PostInstall EFI For USB Booting with GPU Acceleration
+PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm and debug=0x100 boot flag. Also no Mismatched RAM Eror and CPU shows up as geniuine Ryzen
+PostInstall 110% is the same like 100% but with fixed power management.
+
 Fully Working with sleep, iMessage and Apple ID sign-in.
 My "Line Out" Audio is mapped as "Internal Speakers", it works however.
 Sonoma installation not possible because normal itwlm does not init and AirportItwlm panics the boot.
