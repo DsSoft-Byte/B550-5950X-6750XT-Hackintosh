@@ -10,8 +10,11 @@ Components
 # Differences
 
 Preinstall EFI For Install and Setup
+
 PostInstall EFI For USB Booting with GPU Acceleration
+
 PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm and debug=0x100 boot flag. Also no Mismatched RAM Eror and CPU shows up as geniuine Ryzen
+
 PostInstall 110% is the same like 100% but with fixed power management.
 
 Fully Working with sleep, iMessage and Apple ID sign-in.
