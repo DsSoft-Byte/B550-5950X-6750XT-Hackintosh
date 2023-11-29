@@ -23,9 +23,11 @@ Preinstall EFI For Install and Setup
 
 PostInstall EFI For USB Booting with GPU Acceleration
 
-PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm and debug=0x100 boot flag. Also no Mismatched RAM Eror and CPU shows up as geniuine Ryzen
+PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm and debug=0x100 boot flag. Also no Mismatched RAM Eror and CPU shows up as geniuine Ryzen 9 5950X (Change Accordingly, If you DO NOT have a 5950X DO NOT use the 100% EFI.
 
 PostInstall 110% is the same like 100% but with fixed power management.
+
+PostInstall 120% is what like 110% But with USB Mapping done for my specific board and case. DO NOT use if you DONT have a 5950X too!
 
 
 # Use The Preinstall EFI when installing and on the setup too!
