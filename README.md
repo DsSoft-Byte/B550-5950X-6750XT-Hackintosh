@@ -11,7 +11,7 @@ My "Line Out" Audio is mapped as "Internal Speakers", it works however.
 Sonoma installation not possible because normal itwlm does not init and AirportItwlm panics the boot.
 Fully working on Latest Ventura 13.6.1.
 
-# What does NOT work;
+# What does NOT work
 Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X.
 
 Sleep will work for you on the 120% EFI if you have the Aorus B550 Elite V2 (rev 1.2) Motherboard. Its just a MSI Skill issue. If you have a B550 Board that is NOT my exact model, hell even a different revision like rev 1.3 you might run into issues as the PCB was redesigned. All other B550 motherboards should use the 110% EFI and map their ports themselves. (Hackintool Kext method)
