@@ -33,3 +33,6 @@ One could also add the RestrictEvents kext to stop the mismatched RAM notificati
 
 # Half the GPU-Related boot-args are useless (probably) but im too scared to delete them
 Thats for you to find out if you have time.
+
+# Resizable Bar support
+It works, the EFIs are made with it disabled though, you will need to set ResizeAppleGPUBars to 0 and then it will work.
