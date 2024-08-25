@@ -3,7 +3,7 @@
 Components
 1. Gigabyte/Aorus B550 Elite V2 (rev 1.2)
 2. AMD Ryzen 5950X
-3. AMD Radeon RX 6750XT (Fully working thanks too NootRX)
+3. AMD Radeon RX 6750XT (Fully working thanks to NootRX)
 4. 64GB Corsair LPX RAM
 5. Gigabyte GC-WB1733D-I WiFi Card. (Fully working at full speed with bluetooth thanks to AirportITWLM)
 
@@ -28,6 +28,8 @@ PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm a
 PostInstall 110% is the same like 100% but with fixed power management.
 
 PostInstall 120% is what like 110% But with USB Mapping done for my specific board and case. DO NOT use if you DONT have a 5950X too!
+
+Sonoma AIO EFI just works, During all Install Stages, WiFi works in recovery environment, GPU accel works just everything works. USB Mapped with verbose and OpenCanopy Picker.
 
 
 # Use The Preinstall EFI when installing and on the setup too!
