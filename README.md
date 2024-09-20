@@ -8,8 +8,8 @@ Components
 5. Gigabyte GC-WB1733D-I WiFi Card. (Fully working at full speed with bluetooth thanks to AirportITWLM)
 
 My "Line Out" Audio is mapped as "Internal Speakers", it works however.
-Sonoma installation not possible because normal itwlm does not init and AirportItwlm panics the boot.
-Fully working on Latest Ventura 13.6.1.
+Sequoia installation not possible because normal itwlm does not init and AirportItwlm panics the boot.
+Fully working on Latest Sonoma
 
 # What does NOT work
 Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X.
