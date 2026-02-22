@@ -1,42 +1,25 @@
-# Hackintoshing my daily driver desktop
+# B550 Hackintosh
 
 Components
 1. Gigabyte/Aorus B550 Elite V2 (rev 1.2)
-2. AMD Ryzen 5950X
+2. AMD Ryzen 5950X (Any 16 Core AMD CPU should work on B550 with this patching tho)
 3. AMD Radeon RX 6750XT (Fully working thanks to NootRX)
 4. 64GB Corsair LPX RAM
-5. Gigabyte GC-WB1733D-I WiFi Card. (Fully working at full speed with bluetooth thanks to AirportITWLM)
+5. Gigabyte GC-WB1733D-I WiFi Card (Sonoma only)
+6. Realtek RTL8125 Ethernet Card (Tahoe only)
 
 My "Line Out" Audio is mapped as "Internal Speakers", it works however.
-Sequoia installation not possible because normal itwlm does not init and AirportItwlm panics the boot.
-Fully working on Latest Sonoma
 
 # What does NOT work
-Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X.
-
-Sleep will work for you on the 120% EFI if you have the Aorus B550 Elite V2 (rev 1.2) Motherboard. Its just a MSI Skill issue. If you have a B550 Board that is NOT my exact model, hell even a different revision like rev 1.3 you might run into issues as the PCB was redesigned. All other B550 motherboards should use the 110% EFI and map their ports themselves. (Hackintool Kext method)
+Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X, it also doesnt work on Linux tho.
 
 
 # Differences
 
-Preinstall EFI For Install and Setup
-
-PostInstall EFI For USB Booting with GPU Acceleration
-
-PostInstall 100% Has fixed blackscreen issues and NO Verbose boot, no keepsysm and debug=0x100 boot flag. Also no Mismatched RAM Eror and CPU shows up as geniuine Ryzen 9 5950X (Change Accordingly, If you DO NOT have a 5950X DO NOT use the 100% EFI.
-
-PostInstall 110% is the same like 100% but with fixed power management.
-
-PostInstall 120% is what like 110% But with USB Mapping done for my specific board and case. DO NOT use if you DONT have a 5950X too!
-
-Sonoma AIO EFI just works, During all Install Stages, WiFi works in recovery environment, GPU accel works just everything works. USB Mapped with verbose and OpenCanopy Picker.
-
-
-# Use The Preinstall EFI when installing and on the setup too!
-There is a issue with Lilu and NootRX on the last setup stage, the only option is to use WhateverGreen (VESA mode) during the installation and setup stages and then booting the 100% ready system with NootRX later.
+Disregard the Irrelevant testing EFIs, they shouldnt be needed, if something doesent work on during install on Pre Sonoma MacOS use the EFI PreInstall, for Sequoia and up just use the Tahoe EFI as is, its good enough.
 
 1. Preinstall Has Lilu+WhateverGreen with required boot-args
-2. PostInstall Has Lilu+NootRX with required boot-args
+2. PostInstall and Tahoe EFIs have Lilu+NootRX with required boot-args
 
 One could also add the RestrictEvents kext to stop the mismatched RAM notification on MacPro7,1 SMBIOS (It will get confused because 7,1 only has 3 RAM slots and many desktops including mine use 4 DIMMS), i however like it this way.
 
@@ -44,4 +27,4 @@ One could also add the RestrictEvents kext to stop the mismatched RAM notificati
 Thats for you to find out if you have time.
 
 # Resizable Bar support
-It works, the EFIs are made with it disabled though, you will need to set ResizeAppleGPUBars to 0 and then it will work.
+It works, to even boot Sonoma AIO V2 EFI and Tahoe EFI you need Above 4G decode enabled and Re-Bar Auto/On
