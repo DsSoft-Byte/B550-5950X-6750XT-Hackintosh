@@ -10,6 +10,8 @@ Components
 
 My "Line Out" Audio is mapped as "Internal Speakers", it works however.
 
+alcid=3 for this board
+
 # What does NOT work
 Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X, it also doesnt work on Linux tho.
 
