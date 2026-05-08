@@ -13,17 +13,16 @@ My "Line Out" Audio is mapped as "Internal Speakers", it works however.
 alcid=3 for this board
 
 # What does NOT work
-Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X, it also doesnt work on Linux tho.
+1. Sleep, Edge case scenario for me as my GPU has a very weird RGB controller that is NOT i2c but rather behaves like USB, is impossible to Map. This will probably apply only to MSI Radeon 6XXX Series with RGB. I have the 6750XT Gaming Trio X, it also doesnt work on Linux tho.
+
+2. Apple Music FairPlay Audio. AppleTV, Netflix, Amazon Prime, Spotify all work, apple music pretends to play but doesnt.
 
 
 # Differences
+For Sonoma and Lower use the "EFI Sonoma AIO V2" in Sonoma Directory. for Higher version use the Tahoe EFI. Tahoe EFI was updated to a newer OpenCore version, changed bootargs a bit for audio to work and updated kexts.
 
-Disregard the Irrelevant testing EFIs, they shouldnt be needed, if something doesent work on during install on Pre Sonoma MacOS use the EFI PreInstall, for Sequoia and up just use the Tahoe EFI as is, its good enough.
-
-1. Preinstall Has Lilu+WhateverGreen with required boot-args
-2. PostInstall and Tahoe EFIs have Lilu+NootRX with required boot-args
-
-One could also add the RestrictEvents kext to stop the mismatched RAM notification on MacPro7,1 SMBIOS (It will get confused because 7,1 only has 3 RAM slots and many desktops including mine use 4 DIMMS), i however like it this way.
+# Tahoe+ Audio Patching
+For a native like experience i use AppleALC with the AppleHDA backport (Removed in Tahoe). Use MyKextInstaller to install it. The Tahoe EFI has SIP set to disabled, even after resetting nvram 5 times that didnt work for me so boot into MacOS Recovery from OpenCore and set csrutil disable if needed. Reboot and profit from crisp and crystal clear audio.
 
 # Half the GPU-Related boot-args are useless (probably) but im too scared to delete them
 Thats for you to find out if you have time.
