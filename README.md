@@ -19,7 +19,8 @@ alcid=3 for this board
 
 
 # Differences
-For Sonoma and Lower use the "EFI Sonoma AIO V2" in Sonoma Directory. for Higher version use the Tahoe EFI. Tahoe EFI was updated to a newer OpenCore version, changed bootargs a bit for audio to work and updated kexts.
+For Sonoma and Lower use the "EFI Sonoma AIO V2" in Sonoma Directory. for Higher version use the Tahoe EFIs. Tahoe EFIs were updated to a newer OpenCore version, changed bootargs a bit for audio to work and updated kexts. the EFI_Performance has Shanee's mttr patches enabled and Algrey's disabled. Essentially quadrupling the GPU Performance. Not recommended when using HDMI or DisplayPort audio. The recommended EFI as of now is the Tahoe EFI_Performance.
+
 
 # Tahoe+ Audio Patching
 For a native like experience i use AppleALC with the AppleHDA backport (Removed in Tahoe). Use MyKextInstaller to install it. The Tahoe EFI has SIP set to disabled, even after resetting nvram 5 times that didnt work for me so boot into MacOS Recovery from OpenCore and set csrutil disable if needed. Reboot and profit from crisp and crystal clear audio.
